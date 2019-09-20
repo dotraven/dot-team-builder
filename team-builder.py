@@ -13,10 +13,14 @@ players = args.playerslist
 teamsize = args.teamsize
 
 if players is None or teamsize is None:
-    print("Too few valid arguments")
+    print("Too few valid arguments\n"
+          "usage: team-builder.py [-h] [--teamsize TEAMSIZE]"
+          "[--playerslist PLAYERSLIST [PLAYERSLIST ...]]")
     exit(1)
 if teamsize <= 0:
-    print("Invalid team size")
+    print("Invalid team size\n"
+          "usage: team-builder.py [-h] [--teamsize TEAMSIZE]"
+          "[--playerslist PLAYERSLIST [PLAYERSLIST ...]]")
     exit(1)
 try:
     random.shuffle(players)
